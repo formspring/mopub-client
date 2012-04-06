@@ -55,7 +55,7 @@
 	{
 		if (_adBannerView) [self releaseBannerViewDelegateSafely];
 		
-		_adBannerView = [[MPIAdAdapter sharedAdBannerView] retain];
+		_adBannerView = [[ADBannerView alloc] initWithFrame:CGRectZero];
 		
 		CGSize size = [self.delegate maximumAdSize];
 		_adBannerView.frame = (CGRect){{0, 0}, size};
