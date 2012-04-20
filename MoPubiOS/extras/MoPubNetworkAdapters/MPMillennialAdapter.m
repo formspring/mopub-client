@@ -58,7 +58,8 @@
 								 delegate:self
 								   loadAd:NO
 							   startTimer:NO];
-	[self.mmAdView refreshAd];
+    self.mmAdView.rootViewController = [[self.delegate adView] delegate];
+    [self.mmAdView refreshAd];
 }
 
 - (void)setAdPropertiesFromNativeParams:(NSDictionary *)params { 
@@ -92,6 +93,7 @@
 {
 	self.mmAdView.refreshTimerEnabled = NO;
 	self.mmAdView.delegate = nil;
+    self.mmAdView.rootViewController = nil;
 	self.mmAdView = nil;
 }
 
