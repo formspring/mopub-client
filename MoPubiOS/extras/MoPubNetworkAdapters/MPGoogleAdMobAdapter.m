@@ -64,7 +64,7 @@
 	// See: http://code.google.com/mobile/ads/docs/ios/intermediate.html#testdevices
 	request.testDevices = [NSArray arrayWithObjects:
 						   GAD_SIMULATOR_ID, 
-						   // more UDIDs here,
+						   @"37c1ec0517946b53b8a45bf3da5b4ea5ab261d0c",
 						   nil];
 	
 	[_adBannerView loadRequest:request];
