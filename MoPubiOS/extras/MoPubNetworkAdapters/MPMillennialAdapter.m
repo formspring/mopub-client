@@ -91,10 +91,12 @@
  */
 - (void)tearDownExistingAdView
 {
-	self.mmAdView.refreshTimerEnabled = NO;
-	self.mmAdView.delegate = nil;
-    self.mmAdView.rootViewController = nil;
-	self.mmAdView = nil;
+    if(self.mmAdView) { 
+        self.mmAdView.rootViewController = nil;
+        self.mmAdView.refreshTimerEnabled = NO;
+        self.mmAdView.delegate = nil;
+        self.mmAdView = nil;
+    } 
 }
 
 #pragma mark -
