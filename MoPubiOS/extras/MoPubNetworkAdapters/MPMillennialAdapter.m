@@ -58,8 +58,9 @@
 								 delegate:self
 								   loadAd:NO
 							   startTimer:NO];
-    self.mmAdView.rootViewController = [[self.delegate adView] delegate];
-    [self.mmAdView refreshAd];
+ 
+    self.mmAdView.rootViewController = [self.delegate viewControllerForPresentingModalView];
+	[self.mmAdView refreshAd];
 }
 
 - (void)setAdPropertiesFromNativeParams:(NSDictionary *)params { 
